@@ -1,0 +1,41 @@
+/******************************************************************************
+
+                              Online C++ Debugger.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Debug" button to debug it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int n1 , n2;
+    cout<<"Input 2 number:";
+    cin>>n1>>n2;
+    
+    char op;
+    char<<"Input an opertor:";
+    cin>>op;
+    
+    switch(op)
+    case '+':
+    cout<<n1+n2<<endl;
+    break;
+    case '-':
+    cout<<n1-n2<<endl;
+    break;
+    case '*':
+    cout<<n1*n2<<endl;
+    break;
+    case '/':
+    cout<<n1/n2<<endl;
+    break;
+    
+    default:
+    cout<<"Enter a another operator "<<endl;
+    break;
+}
+return 0;
+}

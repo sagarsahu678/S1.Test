@@ -1,0 +1,46 @@
+/******************************************************************************
+
+                              Online C++ Debugger.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Debug" button to debug it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+void date(int fd, int fm,int fy,int sd, int sm, int sy)
+{
+    int d , m , y;
+    int md[] = { 30,28,31,30,31,30,31,31,30,31,30,31};
+    y = fy - sy;
+    if(fy<sy)
+    {
+        y--;
+        m = 12 - (sm - fm);
+    }
+    else
+    { m = fm - sm; }
+    if (fd < sd)
+    {
+        m--;
+        d=md[fm - 1] - (sd - fd);
+    }
+    else
+    { d = fd-sd;}
+    cout<<"Your date is :\n";
+    cout<<y<<"years"<<m<<"months"<<d<<"days";
+    }
+int main()
+{
+    int fd,fm,fy,sd,sm,sy;
+    cout<<"Enter the first Date in the format dd mm yyyy:";
+    cin>>fd>>fm>>fy;
+    cout<<"Enter the second Date in the format dd mm yyyy:";
+    cin>>sd>>sm>>sy;
+    date(fd,fm,fy,sd,sm,sy);
+
+    return 0;
+}
+

@@ -1,0 +1,22 @@
+Create database Student_data;
+
+Drop database Student_data;
+
+Create Table Std_Details(Column_ID int ,Column_Name NVarChar(50),Column_Age int,Column_Contact NVarChar(10))
+
+Drop Table Std_Details;
+
+Create Table Std_Details(Column_ID int Not Null  primary key ,Column_Name NVarChar(50),Column_Age int,Column_Contact NVarChar(10))
+
+Alter Table Std_Details Add Column_Address NVarChar
+
+Alter Table Std_Details drop Column Column_Address 
+
+Alter Table Std_Details Rename  Column Column_Address to location
+
+Alter Table Std_Details  Alter  Column Column_Name int
+
+
+Select * from Std_Details;
+
+Select Column_ID,Column_Name from Std_Details;
